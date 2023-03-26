@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MeleeAttack : MonoBehaviour
+public class MeleeAttack : Health
 {
     public float attackRange = 0.5f; 
     public int attackDamage = 10; 
@@ -12,7 +12,7 @@ public class MeleeAttack : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && !isAttacking) 
+        if (Input.GetKeyDown(KeyCode.Mouse0) && !isAttacking) 
         {
             StartCoroutine(PerformAttack()); 
         }

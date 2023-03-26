@@ -9,22 +9,25 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
 
     public float dashDistance;
-    public float DashDuration;
+    public float dashDuration;
+    public float dashCooldown;
 
-    private bool isDashing = false;
+
+    private bool canDash = true;
 
     private void Start()
     {
-
-        
         rb = GetComponent<Rigidbody2D>();
     }
 
     private void Update()
     {
-        
 
-        
+        if (Input.GetKeyDown(KeyCode.Space) && canDash)
+        {
+            StartCoroutine(PerformDash());
+        }
+
     }
 
     private void FixedUpdate()
@@ -36,38 +39,39 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = movement.normalized * speed;
 
 
+
+
+
+
+    }
+
+    IEnumerator PerformDash()
+    {
+        canDash = false; 
+
         
-        if (!isDashing)
+        Vector2 dashDirection = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")).normalized;
+
+        Vector2 endPosition = rb.position + dashDirection * dashDistance;
+
+        rb.isKinematic = true;
+
+        float elapsedTime = 0f;
+        while (elapsedTime < dashDuration)
         {
-
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                StartCoroutine(Dash());
-            }
-
-
+            rb.MovePosition(Vector2.Lerp(rb.position, endPosition, elapsedTime / dashDuration));
+            elapsedTime += Time.deltaTime;
+            yield return null;
         }
 
 
-    }
+        rb.isKinematic = false;
+
+        yield return new WaitForSeconds(dashCooldown);
+        canDash = true;
 
 
-    private IEnumerator Dash()
-    {
-
-        isDashing = true;
-
-        Vector2 dashDirection = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
-        rb.velocity = dashDirection * dashDistance / DashDuration;
-
-        yield return new WaitForSeconds(DashDuration);
-
-        rb.velocity = Vector2.zero;
-        isDashing = false;
 
 
     }
-
-
-
 }
