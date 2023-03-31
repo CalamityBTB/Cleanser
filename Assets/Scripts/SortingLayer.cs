@@ -4,26 +4,29 @@ using UnityEngine;
 
 public class SortingLayer : MonoBehaviour
 {
-    public GameObject rock;
-    public int sortingOrder = -1;
-    public int sortingOrder2 = 0;
+    public GameObject Obstacle;
+    public int SortingOrder = -1;
+    public int SortingOrder2 = 0;
+    private SpriteRenderer spriteRenderer;
+
+    private void Awake()
+    {
+        spriteRenderer = Obstacle.GetComponent<SpriteRenderer>();
+    }
+
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
-            SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
-
-            spriteRenderer.sortingOrder = sortingOrder;
+           spriteRenderer.sortingOrder = SortingOrder;
         }
     }
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
-            SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
-
-            spriteRenderer.sortingOrder = sortingOrder2;
+            spriteRenderer.sortingOrder = SortingOrder2;
         }
     }
 }
