@@ -29,7 +29,7 @@ public class SaveLoadPlayerPrefs : MonoBehaviour
 
 
         player.transform.position = new Vector2 (PlayerPrefs.GetFloat("x"), PlayerPrefs.GetFloat("y"));
-        SceneManager.LoadScene("MainScene");
+        
         
     }
 
@@ -41,6 +41,12 @@ public class SaveLoadPlayerPrefs : MonoBehaviour
     public void onButtonLoad()
     {
         Loadd();
+    }
+    
+    public void MainLoadButton()
+    {
+        Loadd();
+        SceneManager.LoadScene("MainScene");
     }
     
 

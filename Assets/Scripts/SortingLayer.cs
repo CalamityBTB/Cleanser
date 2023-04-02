@@ -28,5 +28,6 @@ public class SortingLayer : MonoBehaviour
         {
             spriteRenderer.sortingOrder = SortingOrder2;
         }
+
     }
 }

@@ -47,7 +47,7 @@ public class PauseMenu : MonoBehaviour
     {
         pauseMenu.SetActive(true);
 
-        Time.timeScale = 0f;
+     
 
         isPaused = true;
     }
@@ -56,7 +56,7 @@ public class PauseMenu : MonoBehaviour
     public void Resumed()
     {
         pauseMenu.SetActive(false);
-        Time.timeScale = 1f;
+       
 
         isPaused = false;
     }
@@ -64,7 +64,7 @@ public class PauseMenu : MonoBehaviour
     public void mainMnu()
     {
         SceneManager.LoadScene("Start");
-        Time.timeScale = 1f;
+        
     }
 
 
