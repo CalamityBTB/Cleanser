@@ -6,7 +6,7 @@ public class SortingLayer : MonoBehaviour
 {
     public GameObject Obstacle;
     public int SortingOrder = -1;
-    public int SortingOrder2 = 0;
+    public int SortingOrder2 = 3;
     private SpriteRenderer spriteRenderer;
 
     private void Awake()
