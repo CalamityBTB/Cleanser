@@ -5,33 +5,33 @@ using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
-    public float maxHealth;
-    public float currentHealth;
+    public float MaxHealth = 100f;
+    public float CurrentHealth;
     public Slider Heaalthbar;
-    public Health healthBar;
-    public Image healthBarFill;
+    public Health HealthBar;
+    public Image HealthBarFill;
 
     private void Start()
     {
-        currentHealth = maxHealth;
+        CurrentHealth = MaxHealth;
         UpdateHealthBar();
     }
 
     
     public void TakeDamage(float damage)
     {
-        currentHealth -= damage;
+        CurrentHealth -= damage;
         UpdateHealthBar();
 
-        if (currentHealth <= 0)
+        if (CurrentHealth <= 0)
         {
             Die();
         }
     }
     private void UpdateHealthBar()
     {
-        float HealthPercentage = currentHealth / maxHealth;
-        healthBarFill.fillAmount = HealthPercentage;
+        float HealthPercentage = CurrentHealth / 100f;
+        HealthBarFill.fillAmount = HealthPercentage;
     }
     
 

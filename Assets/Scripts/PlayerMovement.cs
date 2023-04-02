@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour, IDataPersistence
 {
     private SpriteRenderer spriteRenderer;
     public float speed;
@@ -23,11 +23,18 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.Space) && canDash)
-        {
-            StartCoroutine(PerformDash());
-        }
+        
 
+    }
+    public void LoadData(GameData data)
+    {
+        this.transform.position = data.playerPosition;
+    }
+
+    public void SaveData(ref GameData data)
+    {
+
+        data.playerPosition = this.transform.position;
     }
 
     private void FixedUpdate()
@@ -38,7 +45,10 @@ public class PlayerMovement : MonoBehaviour
         Vector2 movement = new Vector2(horizontal, vertical);
         rb.velocity = movement.normalized * speed;
 
-
+        if (Input.GetKeyDown(KeyCode.Space) && canDash)
+        {
+            StartCoroutine(PerformDash());
+        }
 
 
 

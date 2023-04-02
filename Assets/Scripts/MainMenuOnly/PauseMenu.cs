@@ -68,6 +68,12 @@ public class PauseMenu : MonoBehaviour
     }
 
 
+    public void OnSaveGameClicked()
+    {
+        DataPersistenceManager.instance.SavedGame();
+    }
+
+
 
     public void QuitGame()
     {
