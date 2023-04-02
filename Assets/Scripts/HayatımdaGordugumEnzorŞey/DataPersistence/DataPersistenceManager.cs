@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using UnityEngine.SceneManagement;
 
 public class DataPersistenceManager : MonoBehaviour
 {
@@ -23,17 +24,38 @@ public class DataPersistenceManager : MonoBehaviour
             Debug.LogError("found more than one data");
         }
         instance = this;
+
+        this.dataHandler = new FileDataHandler(Application.persistentDataPath, fileName);
     }
 
-    private void Start()
+    private void OnEnable()
     {
-        this.dataHandler = new FileDataHandler(Application.persistentDataPath, fileName);
+        SceneManager.sceneLoaded += OnSceneLoaded;
+        SceneManager.sceneUnloaded += OnSceneUnloaded;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+        SceneManager.sceneUnloaded -= OnSceneUnloaded;
+    }
+
+    public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        Debug.Log("Onsceneloaded called");
         this.dataPersistenceObjects = FindAllDataPersistenceObjects();
     }
 
+    public void OnSceneUnloaded(Scene scene)
+    {
+        Debug.Log("Onsceneunloaded called");
+        SavedGame();
+    }
+
+
     public void NewGame()
     {
-        this.gameData = new GameData();
+        this.gameData = new GameData(); 
     }
 
     public void LoadGame()
@@ -51,6 +73,11 @@ public class DataPersistenceManager : MonoBehaviour
             dataPersistenceObj.LoadData(gameData);
         }
 
+    }
+
+    public void Start()
+    {
+        Debug.Log(Application.persistentDataPath);
     }
 
     public void SavedGame()
@@ -71,5 +98,6 @@ public class DataPersistenceManager : MonoBehaviour
         return new List<IDataPersistence>(dataPersistenceObjects);
     }
 
+    
 
 }

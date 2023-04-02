@@ -57,7 +57,7 @@ public class FileDataHandler
 
         try
         {
-            Directory.CreateDirectory(Path.GetDirectoryName(fullPath));
+            FileStream file = File.Open(Application.persistentDataPath + "/" + "SaveTest.dat", FileMode.OpenOrCreate);
 
             //Json complex dictionaryleri desteklemiyo o yüzden .net json asset indirmek lazım/değiştirmek
             string dataToStore = JsonUtility.ToJson(data, true);

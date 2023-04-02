@@ -73,8 +73,6 @@ public class PauseMenu : MonoBehaviour
         DataPersistenceManager.instance.SavedGame();
     }
 
-
-
     public void QuitGame()
     {
         Application.Quit();

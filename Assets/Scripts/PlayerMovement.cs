@@ -23,7 +23,10 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
     private void Update()
     {
 
-        
+        if (Input.GetKeyDown(KeyCode.Space) && canDash)
+        {
+            StartCoroutine(PerformDash());
+        }
 
     }
     public void LoadData(GameData data)
@@ -45,10 +48,7 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
         Vector2 movement = new Vector2(horizontal, vertical);
         rb.velocity = movement.normalized * speed;
 
-        if (Input.GetKeyDown(KeyCode.Space) && canDash)
-        {
-            StartCoroutine(PerformDash());
-        }
+        
 
 
 
@@ -64,7 +64,7 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
 
         Vector2 endPosition = rb.position + dashDirection * dashDistance;
 
-        rb.isKinematic = true;
+        
 
         float elapsedTime = 0f;
         while (elapsedTime < dashDuration)
@@ -75,7 +75,7 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
         }
 
 
-        rb.isKinematic = false;
+        
 
         yield return new WaitForSeconds(dashCooldown);
         canDash = true;
