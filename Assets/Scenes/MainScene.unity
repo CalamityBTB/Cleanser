@@ -3222,7 +3222,7 @@ MonoBehaviour:
   rb: {fileID: 814139846}
   dashDistance: 5
   dashDuration: 2
-  dashCooldown: 1
+  dashCooldown: 0
 --- !u!58 &814139848
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3256,11 +3256,13 @@ MonoBehaviour:
   Heaalthbar: {fileID: 87449274}
   HealthBar: {fileID: 814139849}
   HealthBarFill: {fileID: 1398621713}
-  attackRange: 0.5
-  attackDamage: 10
-  enemyLayers:
+  AttackRange: 1.5
+  AttackDamage: 10
+  EnemyLayers:
     serializedVersion: 2
     m_Bits: 64
+  ComboDelay: 0.5
+  MaxComboHits: 3
 --- !u!1 &820276723
 GameObject:
   m_ObjectHideFlags: 0
@@ -6185,7 +6187,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1375849988
 Transform:
   m_ObjectHideFlags: 0
@@ -7228,7 +7230,7 @@ GameObject:
   - component: {fileID: 1649276501}
   m_Layer: 6
   m_Name: Rock7
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7389,14 +7391,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1649276494}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dff3391f42638420dbb825d99e280193, type: 3}
+  m_Script: {fileID: 11500000, guid: 961aaf8455521cf4ca7a0d4a374dd876, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 100
-  CurrentHealth: 0
-  Heaalthbar: {fileID: 80296021}
-  HealthBar: {fileID: 1649276501}
-  HealthBarFill: {fileID: 1020875201}
+  health: 100
 --- !u!1 &1716703500
 GameObject:
   m_ObjectHideFlags: 0

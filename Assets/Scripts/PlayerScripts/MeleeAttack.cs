@@ -4,9 +4,15 @@ using UnityEngine;
 
 public class MeleeAttack : Health
 {
-    public float attackRange = 0.5f; 
-    public int attackDamage = 10; 
-    public LayerMask enemyLayers; 
+    public float AttackRange = 0.5f; 
+    public float AttackDamage = 10; 
+    public LayerMask EnemyLayers;
+    public float ComboDelay = 0.5f; 
+    public int MaxComboHits = 3; 
+    private int CurrentComboHits = 0; 
+    private bool isComboActive = false;
+    private float LastComboTime = 0f;
+    
 
     private bool isAttacking = false; 
 
@@ -14,39 +20,74 @@ public class MeleeAttack : Health
     {
         if (Input.GetKeyDown(KeyCode.Mouse0) && !isAttacking) 
         {
-            StartCoroutine(PerformAttack()); 
-        }
-    }
+            
+            
+                if (isComboActive && Time.time - LastComboTime < ComboDelay && CurrentComboHits < MaxComboHits)
+                {
+                   
+                    Collider2D[] hitObjects = Physics2D.OverlapCircleAll(transform.position, AttackRange);
 
-    private IEnumerator PerformAttack()
-    {
-        isAttacking = true;
+                    
+                    foreach (Collider2D hitObject in hitObjects)
+                    {
+                        if (hitObject.tag == "Enemy")
+                        {
+                            Enemy enemy = hitObject.GetComponent<Enemy>();
+                            if (enemy != null)
+                            {
+                                enemy.TakeDamage(AttackDamage);
+                            }
+                        }
+                    }
 
-        
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(transform.position, attackRange, enemyLayers);
+                    CurrentComboHits++;
+                    LastComboTime = Time.time;
+                  Debug.Log("combo done");
+                }
+                else
+                {
+                    
+                    Collider2D[] hitObjects = Physics2D.OverlapCircleAll(transform.position, AttackRange);
 
-       
-        foreach (Collider2D enemy in hitEnemies)
-        {
-           
-            Health enemyHealth = enemy.GetComponent<Health>();
-            if (enemyHealth != null)
+                   
+                    foreach (Collider2D hitObject in hitObjects)
+                    {
+                        if (hitObject.tag == "Enemy")
+                        {
+                            
+                            Enemy enemy = hitObject.GetComponent<Enemy>();
+                            if (enemy != null)
+                            {
+                                enemy.TakeDamage(AttackDamage);
+                            }
+                        }
+                    }
+
+                    CurrentComboHits = 1;
+                    isComboActive = true;
+                    LastComboTime = Time.time;
+                }
+            
+
+            if (Time.time - LastComboTime > ComboDelay || CurrentComboHits >= MaxComboHits)
             {
-                enemyHealth.TakeDamage(attackDamage);
+                isComboActive = false;
+                CurrentComboHits = 0;
             }
         }
-
-        
-        yield return new WaitForSeconds(0.5f);
-
-        isAttacking = false;
     }
-
     
+
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, attackRange);
+        Gizmos.DrawWireSphere(transform.position, AttackRange);
     }
-
 }
+
+    
+
+    
+    
+
+

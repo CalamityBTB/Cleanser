@@ -22,7 +22,6 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
 
     private void Update()
     {
-
         if (Input.GetKeyDown(KeyCode.Space) && canDash)
         {
             StartCoroutine(PerformDash());
@@ -48,8 +47,8 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
         Vector2 movement = new Vector2(horizontal, vertical);
         rb.velocity = movement.normalized * speed;
 
-        
 
+       
 
 
 
