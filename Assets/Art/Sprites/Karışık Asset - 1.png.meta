@@ -1,0 +1,666 @@
+fileFormatVersion: 2
+guid: 73ebfc8c606a0b44284bc6db138a0519
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "Kar\u0131\u015F\u0131k Asset - 1_0"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 416
+        width: 939
+        height: 664
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4162cbd9617b35340b3da095ddd1ef68
+      internalID: -392803249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Kar\u0131\u015F\u0131k Asset - 1_1"
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 916
+        width: 128
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8116183b11af41c4a95c9734efa267e4
+      internalID: -25076803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Kar\u0131\u015F\u0131k Asset - 1_3"
+      rect:
+        serializedVersion: 2
+        x: 1132
+        y: 883
+        width: 298
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e55681aeeae35634fa08394516f0fb31
+      internalID: -288788390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Kar\u0131\u015F\u0131k Asset - 1_6"
+      rect:
+        serializedVersion: 2
+        x: 1721
+        y: 909
+        width: 190
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fe2ad63e31c6f342839eb5c30757bae
+      internalID: 230968487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Kar\u0131\u015F\u0131k Asset - 1_21"
+      rect:
+        serializedVersion: 2
+        x: 1495
+        y: 891
+        width: 188
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02ad0e9f881cbe74682c7546f00c5b3d
+      internalID: 1792798265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Kar\u0131\u015F\u0131k Asset - 1_37"
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 338
+        width: 428
+        height: 523
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86ddaabbcda1462419655a863393bece
+      internalID: 1243696802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Kar\u0131\u015F\u0131k Asset - 1_38"
+      rect:
+        serializedVersion: 2
+        x: 1401
+        y: 418
+        width: 519
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a17f2be4d7adefa43a8395495fcb8327
+      internalID: -2056128331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Kar\u0131\u015F\u0131k Asset - 1_39"
+      rect:
+        serializedVersion: 2
+        x: 1916
+        y: 686
+        width: 4
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33a1cb9eb40a9a8439aad0265e5f09a8
+      internalID: -301978794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Kar\u0131\u015F\u0131k Asset - 1_40"
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 513
+        width: 78
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fc4f106865be2143b15e820e11fcb3c
+      internalID: -1671814191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Kar\u0131\u015F\u0131k Asset - 1_42"
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 26
+        width: 200
+        height: 359
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adc9bf1fb64f585479d91d7990af1642
+      internalID: 847763331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Kar\u0131\u015F\u0131k Asset - 1_43"
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 308
+        width: 73
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee8fb1768584def4f9e5d596408c0a55
+      internalID: -436844079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Kar\u0131\u015F\u0131k Asset - 1_45"
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 195
+        width: 156
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e7b2c8d83799ed4ab7c9b826075841e
+      internalID: 1430329092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Kar\u0131\u015F\u0131k Asset - 1_46"
+      rect:
+        serializedVersion: 2
+        x: 1433
+        y: 9
+        width: 470
+        height: 385
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df443e002065c5b46ab1b9101b870821
+      internalID: -980174252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Kar\u0131\u015F\u0131k Asset - 1_48"
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 218
+        width: 91
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b430158eb0d641e4391717a750a74de5
+      internalID: -586940866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Kar\u0131\u015F\u0131k Asset - 1_51"
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 218
+        width: 86
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02449ab4ccb380e4283efb8bd5833692
+      internalID: -449493061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Kar\u0131\u015F\u0131k Asset - 1_52"
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 14
+        width: 149
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92ee1388cbd31e3459f502bfe4eb5771
+      internalID: -222869938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Kar\u0131\u015F\u0131k Asset - 1_53"
+      rect:
+        serializedVersion: 2
+        x: 991
+        y: 174
+        width: 123
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08e212ab340e59b41b3e86a880ca7d66
+      internalID: 322747606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Kar\u0131\u015F\u0131k Asset - 1_54"
+      rect:
+        serializedVersion: 2
+        x: 1197
+        y: 175
+        width: 178
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 629a2935e1449084b9c37adce6d0bde6
+      internalID: -819842751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Kar\u0131\u015F\u0131k Asset - 1_55"
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 39
+        width: 215
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ffc86cc1a9186145a337999938543e5
+      internalID: -984897593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Kar\u0131\u015F\u0131k Asset - 1_56"
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 26
+        width: 75
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0672f5bb278297f459312f6968130edd
+      internalID: 1689956597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Kar\u0131\u015F\u0131k Asset - 1_57"
+      rect:
+        serializedVersion: 2
+        x: 977
+        y: 21
+        width: 100
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1ec3de03305c6c45a048b848c57f594
+      internalID: 1237739488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Kar\u0131\u015F\u0131k Asset - 1_58"
+      rect:
+        serializedVersion: 2
+        x: 1085
+        y: 14
+        width: 85
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2443f8b33d4da24386f3a2eeca90f60
+      internalID: 65352243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Kar\u0131\u015F\u0131k Asset - 1_59"
+      rect:
+        serializedVersion: 2
+        x: 1225
+        y: 1
+        width: 213
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8db5e7544a40b64fa6ab57b88332175
+      internalID: 2044694949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      "Kar\u0131\u015F\u0131k Asset - 1_22": 800017274
+      "Kar\u0131\u015F\u0131k Asset - 1_54": -819842751
+      "Kar\u0131\u015F\u0131k Asset - 1_55": -984897593
+      "Kar\u0131\u015F\u0131k Asset - 1_34": 1857381951
+      "Kar\u0131\u015F\u0131k Asset - 1_21": 1792798265
+      "Kar\u0131\u015F\u0131k Asset - 1_40": -1671814191
+      "Kar\u0131\u015F\u0131k Asset - 1_20": 314013383
+      "Kar\u0131\u015F\u0131k Asset - 1_7": -706940238
+      "Kar\u0131\u015F\u0131k Asset - 1_33": 1913427148
+      "Kar\u0131\u015F\u0131k Asset - 1_31": -875656433
+      "Kar\u0131\u015F\u0131k Asset - 1_1": -25076803
+      "Kar\u0131\u015F\u0131k Asset - 1_15": -794752348
+      "Kar\u0131\u015F\u0131k Asset - 1_50": -245793874
+      "Kar\u0131\u015F\u0131k Asset - 1_16": -892867551
+      "Kar\u0131\u015F\u0131k Asset - 1_39": -301978794
+      "Kar\u0131\u015F\u0131k Asset - 1_46": -980174252
+      "Kar\u0131\u015F\u0131k Asset - 1_49": 685993136
+      "Kar\u0131\u015F\u0131k Asset - 1_30": -782412213
+      "Kar\u0131\u015F\u0131k Asset - 1_51": -449493061
+      "Kar\u0131\u015F\u0131k Asset - 1_5": -1435118964
+      "Kar\u0131\u015F\u0131k Asset - 1_59": 2044694949
+      "Kar\u0131\u015F\u0131k Asset - 1_23": 1962701739
+      "Kar\u0131\u015F\u0131k Asset - 1_2": 973747864
+      "Kar\u0131\u015F\u0131k Asset - 1_11": -1864484914
+      "Kar\u0131\u015F\u0131k Asset - 1_12": -1055917413
+      "Kar\u0131\u015F\u0131k Asset - 1_38": -2056128331
+      "Kar\u0131\u015F\u0131k Asset - 1_14": -1827631705
+      "Kar\u0131\u015F\u0131k Asset - 1_52": -222869938
+      "Kar\u0131\u015F\u0131k Asset - 1_42": 847763331
+      "Kar\u0131\u015F\u0131k Asset - 1_4": -1725316925
+      "Kar\u0131\u015F\u0131k Asset - 1_47": 1076780727
+      "Kar\u0131\u015F\u0131k Asset - 1_58": 65352243
+      "Kar\u0131\u015F\u0131k Asset - 1_19": 403490505
+      "Kar\u0131\u015F\u0131k Asset - 1_6": 230968487
+      "Kar\u0131\u015F\u0131k Asset - 1_44": 15704117
+      "Kar\u0131\u015F\u0131k Asset - 1_0": -392803249
+      "Kar\u0131\u015F\u0131k Asset - 1_53": 322747606
+      "Kar\u0131\u015F\u0131k Asset - 1_27": -1813550668
+      "Kar\u0131\u015F\u0131k Asset - 1_8": -1688097510
+      "Kar\u0131\u015F\u0131k Asset - 1_29": 1623639212
+      "Kar\u0131\u015F\u0131k Asset - 1_25": 1181073698
+      "Kar\u0131\u015F\u0131k Asset - 1_3": -288788390
+      "Kar\u0131\u015F\u0131k Asset - 1_26": -1103875059
+      "Kar\u0131\u015F\u0131k Asset - 1_37": 1243696802
+      "Kar\u0131\u015F\u0131k Asset - 1_35": -1220291704
+      "Kar\u0131\u015F\u0131k Asset - 1_56": 1689956597
+      "Kar\u0131\u015F\u0131k Asset - 1_36": -489515930
+      "Kar\u0131\u015F\u0131k Asset - 1_13": -351752391
+      "Kar\u0131\u015F\u0131k Asset - 1_32": -930710496
+      "Kar\u0131\u015F\u0131k Asset - 1_57": 1237739488
+      "Kar\u0131\u015F\u0131k Asset - 1_10": 1303287840
+      "Kar\u0131\u015F\u0131k Asset - 1_18": -1652744194
+      "Kar\u0131\u015F\u0131k Asset - 1_41": -2041246270
+      "Kar\u0131\u015F\u0131k Asset - 1_28": 885567769
+      "Kar\u0131\u015F\u0131k Asset - 1_9": -732967337
+      "Kar\u0131\u015F\u0131k Asset - 1_17": 18987443
+      "Kar\u0131\u015F\u0131k Asset - 1_24": 1690339736
+      "Kar\u0131\u015F\u0131k Asset - 1_48": -586940866
+      "Kar\u0131\u015F\u0131k Asset - 1_45": 1430329092
+      "Kar\u0131\u015F\u0131k Asset - 1_43": -436844079
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
