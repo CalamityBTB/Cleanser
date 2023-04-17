@@ -1,0 +1,1819 @@
+fileFormatVersion: 2
+guid: 8c79bb8454d584375a91ce3a4af5ee9d
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_0
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 768
+        width: 170
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd2641a96eae149cda3b79039159f7d4
+      internalID: -368700742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_1
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 975
+        width: 4
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49a7caa952b0c46ad87fa758231c077d
+      internalID: -599631214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_2
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 778
+        width: 176
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51ec499cc11ec495b90a061015ef38b1
+      internalID: 169750747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_3
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 778
+        width: 168
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d006763951591477f81691d91f174323
+      internalID: -1041331242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_4
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 758
+        width: 158
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db655273e72b349abbe484044d474378
+      internalID: 1127866068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_5
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 755
+        width: 157
+        height: 315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 723c05ae568204cf3aa71993a4b81903
+      internalID: 627138347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_6
+      rect:
+        serializedVersion: 2
+        x: 1106
+        y: 761
+        width: 155
+        height: 309
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32b8e5f67fc9e46ccbe271e2225d656e
+      internalID: -587587074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_7
+      rect:
+        serializedVersion: 2
+        x: 1357
+        y: 769
+        width: 160
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9207f4afe3af74371b3cd27b6de45a82
+      internalID: 1429386448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_8
+      rect:
+        serializedVersion: 2
+        x: 1549
+        y: 762
+        width: 148
+        height: 294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e4c92d9c422647518a83a492a3e8b20
+      internalID: -1742044202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_9
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 753
+        width: 153
+        height: 298
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 919a52e92acad4572bdb176563c83ddc
+      internalID: -297659197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_10
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 141
+        width: 80
+        height: 257
+      alignment: 9
+      pivot: {x: 0.5, y: 0.49999863}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e03b85118f93d42609f8e3778fc60801
+      internalID: 315523286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_11
+      rect:
+        serializedVersion: 2
+        x: 1872
+        y: 869
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1afb579a1fae14f13a5dc50071d19463
+      internalID: 586043732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_12
+      rect:
+        serializedVersion: 2
+        x: 1509
+        y: 838
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e0b1317575b14ed1a63bc6ff2860f86
+      internalID: -726303510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_13
+      rect:
+        serializedVersion: 2
+        x: 1882
+        y: 847
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80bd1e8bddd3d4030b5f257973996e1a
+      internalID: -431918662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_14
+      rect:
+        serializedVersion: 2
+        x: 1701
+        y: 834
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99adc78a0e0b944c7b335cfe0ec18536
+      internalID: -1627251010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_15
+      rect:
+        serializedVersion: 2
+        x: 1875
+        y: 835
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a89d915c783f431c97e3ef9d3a7a410
+      internalID: -1749721779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_16
+      rect:
+        serializedVersion: 2
+        x: 1893
+        y: 829
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e38bf116d39242a8a38f61977a1c6c9
+      internalID: 190762780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_17
+      rect:
+        serializedVersion: 2
+        x: 1509
+        y: 819
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41b121d3694dc4076b24bf9d734ebcf1
+      internalID: -1949825253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_18
+      rect:
+        serializedVersion: 2
+        x: 1526
+        y: 809
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22a753ab9cc664114a78a69eced094a9
+      internalID: -1641545157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_19
+      rect:
+        serializedVersion: 2
+        x: 1701
+        y: 815
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af2cde5cf642f4dbea6a1cad489e1dee
+      internalID: -1401899729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_20
+      rect:
+        serializedVersion: 2
+        x: 1894
+        y: 810
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12d7d83a9dc804eafbe21215dd9335f6
+      internalID: -781832638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_21
+      rect:
+        serializedVersion: 2
+        x: 1357
+        y: 804
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e34cc4b6a0b584d009c0093f61451317
+      internalID: 679923114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_22
+      rect:
+        serializedVersion: 2
+        x: 1510
+        y: 809
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0678693c63d8844b3b50d76a0315cce9
+      internalID: -1326139335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_23
+      rect:
+        serializedVersion: 2
+        x: 1702
+        y: 800
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3177cfa5dd16f410b8cf1b753365d13b
+      internalID: -759420506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_24
+      rect:
+        serializedVersion: 2
+        x: 1718
+        y: 805
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c073d17e176234a948fecbac60880976
+      internalID: 1869408559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_25
+      rect:
+        serializedVersion: 2
+        x: 1879
+        y: 794
+        width: 6
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bc6fde721a21492e849fd1ea17e95d1
+      internalID: -989617895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_26
+      rect:
+        serializedVersion: 2
+        x: 1910
+        y: 800
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45e730aef4ed24cfe977dce4f94663f0
+      internalID: -1349886910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_27
+      rect:
+        serializedVersion: 2
+        x: 1501
+        y: 791
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da0406e66de6c413f81fd420b41fac5f
+      internalID: 457050407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_28
+      rect:
+        serializedVersion: 2
+        x: 1549
+        y: 800
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2534df24efee64eed9a3756779e98dcb
+      internalID: 1324389010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_29
+      rect:
+        serializedVersion: 2
+        x: 1741
+        y: 795
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fb6129ba6167464fa69a65ec81b4f19
+      internalID: -1146647886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_30
+      rect:
+        serializedVersion: 2
+        x: 1894
+        y: 795
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 496e8d5c38be241f3ba7ab7f6de61aff
+      internalID: -877299810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_31
+      rect:
+        serializedVersion: 2
+        x: 1693
+        y: 787
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed32a0a40b4e14e9c861125a76071f5f
+      internalID: -1659442899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_32
+      rect:
+        serializedVersion: 2
+        x: 1886
+        y: 782
+        width: 13
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c10b2704a6f0e401086b95af33adb681
+      internalID: -510401467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_33
+      rect:
+        serializedVersion: 2
+        x: 1459
+        y: 768
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f03a464aeaa5346d796734daadb4179e
+      internalID: -455035812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_34
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 432
+        width: 142
+        height: 294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee98ce108c96c4fac944517dfaa7d223
+      internalID: 684777405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_35
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 428
+        width: 163
+        height: 298
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf053cf63e9454c3a8664ef0f352f030
+      internalID: 1824939754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_36
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 430
+        width: 150
+        height: 296
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba231857dbe584edea117f927bab6e2f
+      internalID: -448005309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_37
+      rect:
+        serializedVersion: 2
+        x: 1348
+        y: 408
+        width: 137
+        height: 292
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40ebc5984c2594071a090447abdc4624
+      internalID: -138875033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_38
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 518
+        width: 4
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaca9610ead5d46b3ab92a08e93dc8ab
+      internalID: 1076285793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_39
+      rect:
+        serializedVersion: 2
+        x: 1530
+        y: 413
+        width: 147
+        height: 292
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28ec5eb86e02442b09afbc764b48a8f9
+      internalID: 1733848728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_40
+      rect:
+        serializedVersion: 2
+        x: 1720
+        y: 417
+        width: 149
+        height: 292
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3987494be05304d44a3bd8cf5c25f377
+      internalID: -48544312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_41
+      rect:
+        serializedVersion: 2
+        x: 1338
+        y: 497
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c13ee8296a0044399914d4f4cc588a0
+      internalID: -1345568642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_42
+      rect:
+        serializedVersion: 2
+        x: 1346
+        y: 497
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4d066d4b7d564abcb787d10af58e970
+      internalID: 96589250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_43
+      rect:
+        serializedVersion: 2
+        x: 1327
+        y: 478
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb2d10b43f69748f690b343a1f7564a7
+      internalID: -1913846704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_44
+      rect:
+        serializedVersion: 2
+        x: 1345
+        y: 479
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39b1fc015bc7f4f26afb5088e13283b6
+      internalID: -388809006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_45
+      rect:
+        serializedVersion: 2
+        x: 1347
+        y: 484
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab9d55f1105804accb796c87540f39fb
+      internalID: 1636244778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_46
+      rect:
+        serializedVersion: 2
+        x: 1519
+        y: 483
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa2f551e3626d4f5bbfbf2935cc8529e
+      internalID: -1636864710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_47
+      rect:
+        serializedVersion: 2
+        x: 1711
+        y: 487
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47569f2570a194d03b65ccc017671ce5
+      internalID: -129801899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_48
+      rect:
+        serializedVersion: 2
+        x: 1325
+        y: 459
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23ee4ece65506484cabd596d84b65d03
+      internalID: -1344973368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_49
+      rect:
+        serializedVersion: 2
+        x: 1517
+        y: 464
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 605eea7d248024a30a62d6f0259c7d9a
+      internalID: 447149662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_50
+      rect:
+        serializedVersion: 2
+        x: 1690
+        y: 458
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec344fb49138a4cee8e86a5b459bf551
+      internalID: 1124141597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_51
+      rect:
+        serializedVersion: 2
+        x: 1709
+        y: 468
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3239caa95835d4845b3813a9c7e48eb3
+      internalID: -1534113953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_52
+      rect:
+        serializedVersion: 2
+        x: 1306
+        y: 449
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 118d86efef97548ccbdbfcdf22c6b2e6
+      internalID: -667783011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_53
+      rect:
+        serializedVersion: 2
+        x: 1322
+        y: 444
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 490e937b027264df9932a373b8cbef4a
+      internalID: 49766498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_54
+      rect:
+        serializedVersion: 2
+        x: 1341
+        y: 443
+        width: 5
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a675707baa1cd4a1e8e9d83029aea94a
+      internalID: 356508156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_55
+      rect:
+        serializedVersion: 2
+        x: 1498
+        y: 454
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c9d27b0cec4045298f903f454ea7665
+      internalID: -1538365551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_56
+      rect:
+        serializedVersion: 2
+        x: 1514
+        y: 449
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5641c418f4bd4543aab6e404b5113d7
+      internalID: 1369523087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_57
+      rect:
+        serializedVersion: 2
+        x: 1673
+        y: 449
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a87d1cf6ad6a495686b410213b6366e
+      internalID: -250337212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_58
+      rect:
+        serializedVersion: 2
+        x: 1706
+        y: 453
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 613a071160cd3496fb4ce0e61ee775a3
+      internalID: -1703590470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_59
+      rect:
+        serializedVersion: 2
+        x: 1865
+        y: 453
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a64643f323baf4051ae42c2e21cbdcf2
+      internalID: -1599826065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_60
+      rect:
+        serializedVersion: 2
+        x: 1481
+        y: 444
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de3f2163d13eb47ad97c18f3d5599917
+      internalID: 1214391960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_61
+      rect:
+        serializedVersion: 2
+        x: 1711
+        y: 440
+        width: 17
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1d51ce1ba0dc428096df1fd6d002ec8
+      internalID: 1616814642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_62
+      rect:
+        serializedVersion: 2
+        x: 1327
+        y: 431
+        width: 13
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a356e27917f944f8ab69ba060a544df
+      internalID: -1728339284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_63
+      rect:
+        serializedVersion: 2
+        x: 1519
+        y: 436
+        width: 17
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1afc5f544bdab44e69e0d0baf8a1223c
+      internalID: 1745056568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_64
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 404
+        width: 10
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91d3a5b2ee8a34ffb9a4157b99763846
+      internalID: -17748931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_65
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 97
+        width: 146
+        height: 293
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d78324dab3b934c048a03106a8c2bcbf
+      internalID: -1390379156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_66
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 91
+        width: 159
+        height: 305
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d849d6780a924704a63bc325e9613d2
+      internalID: 310500942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_67
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 94
+        width: 140
+        height: 296
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 822186e7c76b44838b013d2e0203ecf4
+      internalID: 123376524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_68
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 120
+        width: 69
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f299b97ee7f44fd58c4c4a6f0208d0e
+      internalID: 1426316635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_69
+      rect:
+        serializedVersion: 2
+        x: 737
+        y: 89
+        width: 141
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 927c0013347c2480aa1e0cd36aaa7e31
+      internalID: -988070334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_70
+      rect:
+        serializedVersion: 2
+        x: 919
+        y: 93
+        width: 144
+        height: 296
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b8b6de549337401f9fe328360048586
+      internalID: 562624478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_71
+      rect:
+        serializedVersion: 2
+        x: 1111
+        y: 91
+        width: 141
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9889edcca874f4c41b851299bbdf9e6a
+      internalID: 725728097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_72
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 413
+        width: 153
+        height: 309
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33b76928956ac48b3be6d83369d5a361
+      internalID: -1636541289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_73
+      rect:
+        serializedVersion: 2
+        x: 919
+        y: 413
+        width: 150
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d76096f1d9f44df099998d8cd241d13
+      internalID: -393113434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_74
+      rect:
+        serializedVersion: 2
+        x: 1102
+        y: 413
+        width: 164
+        height: 303
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b40e3c2821cc4cd4b05eb2e5767edb1
+      internalID: -1299695295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilMarcusWalking-Last_75
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 114
+        width: 90
+        height: 183
+      alignment: 9
+      pivot: {x: 0.5, y: 0.49999967}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a838b96beac340fdacff302f896c1c0
+      internalID: -1484470932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      EvilMarcusWalking-Last_0: -368700742
+      EvilMarcusWalking-Last_22: -1326139335
+      EvilMarcusWalking-Last_67: 123376524
+      EvilMarcusWalking-Last_9: -297659197
+      EvilMarcusWalking-Last_4: 1127866068
+      EvilMarcusWalking-Last_53: 49766498
+      EvilMarcusWalking-Last_13: -431918662
+      EvilMarcusWalking-Last_33: -455035812
+      EvilMarcusWalking-Last_19: -1401899729
+      EvilMarcusWalking-Last_63: 1745056568
+      EvilMarcusWalking-Last_69: -988070334
+      EvilMarcusWalking-Last_3: -1041331242
+      EvilMarcusWalking-Last_11: 586043732
+      EvilMarcusWalking-Last_72: -1019849781
+      EvilMarcusWalking-Last_27: 457050407
+      EvilMarcusWalking-Last_5: 627138347
+      EvilMarcusWalking-Last_45: 1636244778
+      EvilMarcusWalking-Last_10: 315523286
+      EvilMarcusWalking-Last_29: -1146647886
+      EvilMarcusWalking-Last_73: -1636541289
+      EvilMarcusWalking-Last_48: -1344973368
+      EvilMarcusWalking-Last_68: 1426316635
+      EvilMarcusWalking-Last_49: 447149662
+      EvilMarcusWalking-Last_60: 1214391960
+      EvilMarcusWalking-Last_7: 1429386448
+      EvilMarcusWalking-Last_61: 1616814642
+      EvilMarcusWalking-Last_71: 725728097
+      EvilMarcusWalking-Last_39: 1733848728
+      EvilMarcusWalking-Last_59: -1599826065
+      EvilMarcusWalking-Last_50: 1124141597
+      EvilMarcusWalking-Last_1: -599631214
+      EvilMarcusWalking-Last_52: -667783011
+      EvilMarcusWalking-Last_62: -1728339284
+      EvilMarcusWalking-Last_25: -989617895
+      EvilMarcusWalking-Last_2: 169750747
+      EvilMarcusWalking-Last_56: 1369523087
+      EvilMarcusWalking-Last_54: 356508156
+      EvilMarcusWalking-Last_65: -1390379156
+      EvilMarcusWalking-Last_58: -1703590470
+      EvilMarcusWalking-Last_47: -129801899
+      EvilMarcusWalking-Last_42: 96589250
+      EvilMarcusWalking-Last_24: 1869408559
+      EvilMarcusWalking-Last_44: -388809006
+      EvilMarcusWalking-Last_75: -1299695295
+      EvilMarcusWalking-Last_14: -1627251010
+      EvilMarcusWalking-Last_16: 190762780
+      EvilMarcusWalking-Last_70: 562624478
+      EvilMarcusWalking-Last_51: -1534113953
+      EvilMarcusWalking-Last_26: -1349886910
+      EvilMarcusWalking-Last_36: -448005309
+      EvilMarcusWalking-Last_35: 1824939754
+      EvilMarcusWalking-Last_18: -1641545157
+      EvilMarcusWalking-Last_20: -781832638
+      EvilMarcusWalking-Last_40: -48544312
+      EvilMarcusWalking-Last_6: -587587074
+      EvilMarcusWalking-Last_57: -250337212
+      EvilMarcusWalking-Last_8: -1742044202
+      EvilMarcusWalking-Last_32: -510401467
+      EvilMarcusWalking-Last_43: -1913846704
+      EvilMarcusWalking-Last_23: -759420506
+      EvilMarcusWalking-Last_37: -138875033
+      EvilMarcusWalking-Last_21: 679923114
+      EvilMarcusWalking-Last_15: -1749721779
+      EvilMarcusWalking-Last_64: -17748931
+      EvilMarcusWalking-Last_31: -1659442899
+      EvilMarcusWalking-Last_34: 684777405
+      EvilMarcusWalking-Last_38: 1076285793
+      EvilMarcusWalking-Last_17: -1949825253
+      EvilMarcusWalking-Last_55: -1538365551
+      EvilMarcusWalking-Last_74: -393113434
+      EvilMarcusWalking-Last_41: -1345568642
+      EvilMarcusWalking-Last_30: -877299810
+      EvilMarcusWalking-Last_12: -726303510
+      EvilMarcusWalking-Last_66: 310500942
+      EvilMarcusWalking-Last_28: 1324389010
+      EvilMarcusWalking-Last_46: -1636864710
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
