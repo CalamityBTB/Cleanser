@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class RoamerBehaviour : MonoBehaviour
 {
-    public float roamRadius = 5f;
-    public float moveSpeed = 2f;
-    public float attackRange = 1f;
-    public float attackCooldown = 2f;
-    public float stunDuration = 1f;
-    public float chaseSpeed = 3f; 
+    [SerializeField] private float roamRadius = 5f;
+    [SerializeField] private float moveSpeed = 2f;
+    [SerializeField] private float attackRange = 1f;
+    [SerializeField] private float attackCooldown = 2f;
+    [SerializeField] private float stunDuration = 1f;
+    [SerializeField] private float chaseSpeed = 3f;
 
     private Vector3 initialPosition;
     private bool isIdle = true;
@@ -17,41 +17,55 @@ public class RoamerBehaviour : MonoBehaviour
     private bool isStunned = false;
     private float lastAttackTime = 0f;
     private Transform target;
-    private bool isChasing = false; 
+    private bool isChasing = false;
     private Vector3 lastTargetPosition;
 
     void Start()
     {
         initialPosition = transform.position;
+        StartCoroutine(Roaming());
     }
 
-    void Update()
+    private IEnumerator Roaming()
     {
-        if (isIdle)
+        while (true)
         {
-            RoamAround();
-        }
-        else if (isInCombat)
-        {
-            if (target != null)
+            if (isIdle)
             {
-                if (!isChasing)
+                RoamAround();
+            }
+            else if (isInCombat)
+            {
+                if (target != null)
                 {
-                    isChasing = true;
-                    lastTargetPosition = target.position;
+                    if (!isChasing)
+                    {
+                        isChasing = true;
+                        lastTargetPosition = target.position;
+                    }
+                    ChaseTarget();
+                   
                 }
-                ChaseTarget();
-                if (IsTargetWithinAttackRange())
+                else
                 {
-                    AttackTarget();
+
+                    isIdle = true;
                 }
             }
-        }
-        else if (isStunned)
-        {
+            else if (isStunned)
+            {
 
+                StopAllCoroutines();
+                yield return new WaitForSeconds(stunDuration);
+                isStunned = false;
+                StartCoroutine(Roaming());
+            }
+
+            yield return null;
         }
     }
+
+
 
     void RoamAround()
     {
@@ -74,31 +88,35 @@ public class RoamerBehaviour : MonoBehaviour
             yield return null;
         }
         isIdle = true;
+        
     }
 
     void ChaseTarget()
     {
-        Vector3 targetPosition = target.position;
-        transform.position = Vector3.MoveTowards(transform.position, targetPosition, chaseSpeed * Time.deltaTime);
-        lastTargetPosition = targetPosition;
-    }
-
-    bool IsTargetWithinAttackRange()
-    {
         if (target != null)
         {
-            float distance = Vector3.Distance(transform.position, target.position);
-            return distance <= attackRange;
+            Vector3 targetPosition = target.position;
+            if (!isChasing)
+            {
+                isChasing = true;
+                lastTargetPosition = targetPosition;
+            }
+            if (lastTargetPosition != targetPosition)
+            {
+                lastTargetPosition = targetPosition;
+            }
+            transform.position = Vector3.MoveTowards(transform.position, lastTargetPosition, chaseSpeed * Time.deltaTime);
         }
-        return false;
     }
+
+
+   
 
     void AttackTarget()
     {
         if (Time.time > lastAttackTime + attackCooldown)
         {
-            //atak animasyonu
-            //player can azalmasý veya block mekaniði
+            // Play attack animation, reduce player health or use block mechanic
             lastAttackTime = Time.time;
             StartCoroutine(AttackCooldown());
         }
@@ -107,9 +125,10 @@ public class RoamerBehaviour : MonoBehaviour
     IEnumerator AttackCooldown()
     {
         isInCombat = false;
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(attackCooldown);
         isInCombat = true;
     }
+
 
     public void Stun()
     {
@@ -129,7 +148,7 @@ public class RoamerBehaviour : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
+        if (collision.CompareTag("Player"))
         {
             target = collision.transform;
             isIdle = false;
@@ -139,12 +158,23 @@ public class RoamerBehaviour : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
+        if (collision.CompareTag("Player"))
         {
             target = null;
-            isChasing = false; 
-            
+            isChasing = false;
+            StopAllCoroutines();
             StartCoroutine(MoveToTargetPosition(initialPosition));
+            StartCoroutine(Roaming());
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.CompareTag("Player"))
+        {
+            AttackTarget();
+        }
+    }
+
+
 }

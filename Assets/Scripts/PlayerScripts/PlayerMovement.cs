@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour, IDataPersistence
+public class PlayerMovement : MonoBehaviour     
 {
     private SpriteRenderer spriteRenderer;
     public float speed;
@@ -28,16 +28,7 @@ public class PlayerMovement : MonoBehaviour, IDataPersistence
         }
 
     }
-    public void LoadData(GameData data)
-    {
-        this.transform.position = data.playerPosition;
-    }
-
-    public void SaveData(ref GameData data)
-    {
-
-        data.playerPosition = this.transform.position;
-    }
+    
 
     private void FixedUpdate()
     {
