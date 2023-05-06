@@ -8,6 +8,8 @@ public class PlayerMovement : MonoBehaviour
     public float speed;
     public Rigidbody2D rb;
 
+    public Animator animator;
+
     public float dashDistance;
     public float dashDuration;
     public float dashCooldown;
@@ -22,28 +24,26 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && canDash)
-        {
-            StartCoroutine(PerformDash());
-        }
-
-    }
-    
-
-    private void FixedUpdate()
-    {
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
 
         Vector2 movement = new Vector2(horizontal, vertical);
         rb.velocity = movement.normalized * speed;
 
+        if (Input.GetKeyDown(KeyCode.Space) && canDash)
+        {
+            StartCoroutine(PerformDash());
+        }
 
-       
+        animator.SetFloat("Horizontal", horizontal);
+        animator.SetFloat("Vertical", vertical);
+        animator.SetFloat("Speed", movement.sqrMagnitude);
 
-
-
+        
     }
+    
+
+   
 
     IEnumerator PerformDash()
     {
