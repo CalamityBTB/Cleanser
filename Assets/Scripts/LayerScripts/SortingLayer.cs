@@ -5,9 +5,9 @@ using UnityEngine;
 public class SortingLayer : MonoBehaviour
 {
     public GameObject Obstacle;
-    public int SortingOrder = -1;
-    public int SortingOrder2 = 3;
-    private SpriteRenderer spriteRenderer;
+    [SerializeField] private int _sortingOrder1 = -1;
+    [SerializeField] private int _sortingOrder2 = 3;
+    public SpriteRenderer spriteRenderer;
 
     private void Awake()
     {
@@ -19,14 +19,14 @@ public class SortingLayer : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-           spriteRenderer.sortingOrder = SortingOrder;
+           spriteRenderer.sortingOrder = _sortingOrder1;
         }
     }
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            spriteRenderer.sortingOrder = SortingOrder2;
+            spriteRenderer.sortingOrder = _sortingOrder2;
         }
 
     }

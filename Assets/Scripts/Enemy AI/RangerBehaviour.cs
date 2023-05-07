@@ -5,25 +5,25 @@ using UnityEngine;
 public class RangerBehaviour : MonoBehaviour
 {
     [Header("Idle State")]
-    public float idleMoveSpeed = 1.5f;
-    public float idleMoveTimeMin = 2f;
-    public float idleMoveTimeMax = 3f;
+    [SerializeField] private float _idleMoveSpeed = 1.5f;
+    [SerializeField] private float _idleMoveTimeMin = 2f;
+    [SerializeField] private float _idleMoveTimeMax = 3f;
 
     [Header("Detection State")]
-    public float detectionRadius = 10f;
+    [SerializeField] private float _detectionRadius = 10f;
 
     [Header("Combat State")]
     public GameObject poisonBallPrefab;
-    public float poisonBallSpeed = 8f;
-    public float poisonBallCooldown = 3f;
-    public float poisonBallSpawnOffset = 1f;
+    [SerializeField] private float _poisonBallSpeed = 8f;
+    [SerializeField] private float _poisonBallCooldown = 3f;
+    [SerializeField] private float _poisonBallSpawnOffset = 1f;
 
-    private Transform target;
-    private Vector3 initialPosition;
-    private bool isIdle = true;
-    private bool isInCombat = false;
-    private bool isFiringPoisonBall = false;
-    private float nextPoisonBallTime;
+    private Transform _target;
+    private Vector3 _initialPosition;
+    private bool _isIdle = true;
+    private bool _isInCombat = false;
+    private bool _isFiringPoisonBall = false;
+    private float _nextPoisonBallTime;
 
     private Rigidbody2D rb;
     //private Animator anim;
@@ -32,29 +32,29 @@ public class RangerBehaviour : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         //anim = GetComponent<Animator>();
-        initialPosition = transform.position;
+        _initialPosition = transform.position;
         StartCoroutine(Idle());
     }
 
     private void Update()
     {
-        if (isInCombat)
+        if (_isInCombat)
         {
-            if (Time.time > nextPoisonBallTime && !isFiringPoisonBall)
+            if (Time.time > _nextPoisonBallTime && !_isFiringPoisonBall)
             {
                 StartCoroutine(FirePoisonBall());
             }
         }
         else
         {
-            if (target != null)
+            if (_target != null)
             {
-                float distanceToTarget = Vector3.Distance(transform.position, target.position);
-                if (distanceToTarget <= detectionRadius)
+                float distanceToTarget = Vector3.Distance(transform.position, _target.position);
+                if (distanceToTarget <= _detectionRadius)
                 {
-                    isIdle = false;
-                    isInCombat = true;
-                    isFiringPoisonBall = false;
+                    _isIdle = false;
+                    _isInCombat = true;
+                    _isFiringPoisonBall = false;
                     StopAllCoroutines();
                 }
             }
@@ -63,17 +63,17 @@ public class RangerBehaviour : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (isIdle)
+        if (_isIdle)
         {
             // Move randomly
-            rb.velocity = Random.insideUnitCircle.normalized * idleMoveSpeed;
+            rb.velocity = Random.insideUnitCircle.normalized * _idleMoveSpeed;
         }
-        else if (isInCombat)
+        else if (_isInCombat)
         {
-            if (!isFiringPoisonBall)
+            if (!_isFiringPoisonBall)
             {
                 // Look at target
-                Vector2 direction = (target.position - transform.position).normalized;
+                Vector2 direction = (_target.position - transform.position).normalized;
                 transform.right = direction;
 
                 // Stop moving
@@ -86,7 +86,7 @@ public class RangerBehaviour : MonoBehaviour
     {
         while (true)
         {
-            float idleMoveTime = Random.Range(idleMoveTimeMin, idleMoveTimeMax);
+            float idleMoveTime = Random.Range(_idleMoveTimeMin, _idleMoveTimeMax);
             yield return new WaitForSeconds(idleMoveTime);
             rb.velocity = Vector2.zero;
             yield return new WaitForSeconds(idleMoveTime);
@@ -95,27 +95,27 @@ public class RangerBehaviour : MonoBehaviour
 
     IEnumerator FirePoisonBall()
     {
-        isFiringPoisonBall = true;
+        _isFiringPoisonBall = true;
         //animasyon 
         yield return new WaitForSeconds(0.5f);
-        if (target != null)
+        if (_target != null)
         {
-            Vector3 direction = (target.position - transform.position).normalized;
-            Vector3 spawnPosition = transform.position + direction * poisonBallSpawnOffset;
+            Vector3 direction = (_target.position - transform.position).normalized;
+            Vector3 spawnPosition = transform.position + direction * _poisonBallSpawnOffset;
 
             GameObject poisonBall = Instantiate(poisonBallPrefab, spawnPosition, Quaternion.identity);
-            poisonBall.GetComponent<Rigidbody2D>().velocity = direction * poisonBallSpeed;
+            poisonBall.GetComponent<Rigidbody2D>().velocity = direction * _poisonBallSpeed;
 
-            nextPoisonBallTime = Time.time + poisonBallCooldown;
+            _nextPoisonBallTime = Time.time + _poisonBallCooldown;
         }
-        isFiringPoisonBall = false;
+        _isFiringPoisonBall = false;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
         {
-            target = collision.transform;
+            _target = collision.transform;
         }
     }
 
@@ -123,8 +123,8 @@ public class RangerBehaviour : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            target = null;
-            isInCombat = false;
+            _target = null;
+            _isInCombat = false;
             StartCoroutine(Idle());
         }
     }
