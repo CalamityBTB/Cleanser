@@ -4,49 +4,49 @@ using UnityEngine;
 
 public class OptionsMenu : PauseMenu
 {
-    public GameObject optionsMenu;
-    public bool isOppened;
+        public GameObject optionsMenu;
+        public bool isOppened;
 
-    void Start()
-    {
-        optionsMenu.SetActive(false);
-    }
-
-    void Update()
-    {
-       if (Input.GetKeyDown(KeyCode.O))
+        void Start()
         {
-           if (isOppened)
+            optionsMenu.SetActive(false);
+        }
+
+        void Update()
+        {
+           if (Input.GetKeyDown(KeyCode.O))
             {
-                DeactivateOptions();
+               if (isOppened)
+                {
+                    DeactivateOptions();
                 
-            }
-           else
-            {
-                ActivateOptions();
+                }
+               else
+                {
+                    ActivateOptions();
                 
+                }
             }
         }
-    }
 
-    public void ActivateOptions()
-    {
-        optionsMenu.SetActive(true);
-        isOppened = true;
-        pauseMenu.SetActive(false);
-    }
+        public void ActivateOptions()
+        {
+            optionsMenu.SetActive(true);
+            isOppened = true;
+            pauseMenu.SetActive(false);
+        }
 
-    public void DeactivateOptions()
-    {
-        optionsMenu.SetActive(false);
-        isOppened = false;
-        pauseMenu.SetActive(true);
-    }
+        public void DeactivateOptions()
+        {
+            optionsMenu.SetActive(false);
+            isOppened = false;
+            pauseMenu.SetActive(true);
+        }
 
    
-    public void GoBackButtonPressed()
-    {
-       DeactivateOptions();
-    }
+        public void GoBackButtonPressed()
+        {
+           DeactivateOptions();
+        }
 
 }

@@ -14,7 +14,7 @@ public class InteractableObject : CollidableObject
 
     private void OnInteract()
     {
-        Debug.Log("alllaa");
+        ES3AutoSaveMgr.Current.Save();
     }
 
 
