@@ -4,14 +4,18 @@ using UnityEngine;
 
 public class SavePoint : MonoBehaviour
 {
-    public GameObject savePoint;
-
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (Input.GetKeyDown(KeyCode.I))
+
+        if (collision.CompareTag("Player"))
         {
-            ES3AutoSaveMgr.Current.Save();
+            if (Input.GetKeyDown(KeyCode.L))
+            {
+                ES3AutoSaveMgr.Current.Save();
+                Debug.LogError("Saved");
+            }
         }
+
     }
 
 
