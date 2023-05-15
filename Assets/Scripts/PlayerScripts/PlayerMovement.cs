@@ -10,16 +10,29 @@ public class PlayerMovement : MonoBehaviour
 
     public Animator animator;
 
-    public float dashDistance;
-    public float dashDuration;
-    public float dashCooldown;
+    //Dash 
+    private float dashCooldownTime;
+    private float dashTime;
+    public float dashDuration = 0.5f;
+    public float dashCooldown = 2f;
+
+    private float activeMoveSpeed;
+
+    public float dashSpeed;
+   
 
 
-    private bool canDash = true;
+    private void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
+
 
     private void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        dashTime = dashDuration;
+        dashCooldownTime = dashCooldown;
+        activeMoveSpeed = speed;
     }
 
     private void Update()
@@ -28,50 +41,34 @@ public class PlayerMovement : MonoBehaviour
         float vertical = Input.GetAxis("Vertical");
 
         Vector2 movement = new Vector2(horizontal, vertical);
-        rb.velocity = movement.normalized * speed;
-
-        if (Input.GetKeyDown(KeyCode.Space) && canDash)
-        {
-            StartCoroutine(PerformDash());
-        }
+        rb.velocity = movement.normalized * activeMoveSpeed;
 
         animator.SetFloat("Horizontal", horizontal);
         animator.SetFloat("Vertical", vertical);
         animator.SetFloat("Speed", movement.sqrMagnitude);
 
-        
+        if (Input.GetKeyDown(KeyCode.LeftShift) && dashCooldownTime >= dashCooldown)
+        {
+
+            activeMoveSpeed = dashSpeed;
+            dashTime = dashDuration;
+            dashCooldownTime = 0;
+            
+        }
+
+        if (dashTime <= 0)
+        {
+            activeMoveSpeed = speed;
+        }
+
+        else
+        {
+            dashTime -= Time.deltaTime;
+        }
+
+        dashCooldownTime += Time.deltaTime;
+    
     }
     
 
-   
-
-    IEnumerator PerformDash()
-    {
-        canDash = false; 
-
-        
-        Vector2 dashDirection = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")).normalized;
-
-        Vector2 endPosition = rb.position + dashDirection * dashDistance;
-
-        
-
-        float elapsedTime = 0f;
-        while (elapsedTime < dashDuration)
-        {
-            rb.MovePosition(Vector2.Lerp(rb.position, endPosition, elapsedTime / dashDuration));
-            elapsedTime += Time.deltaTime;
-            yield return null;
-        }
-
-
-        
-
-        yield return new WaitForSeconds(dashCooldown);
-        canDash = true;
-
-
-
-
-    }
 }
