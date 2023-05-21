@@ -24,6 +24,10 @@ public class RoamerBehaviour : MonoBehaviour
     private Vector3 _lastTargetPosition;
     private Transform _target;
 
+    Health playerHealth;
+
+    public float RoamerDamage;
+
     void Start()
     {
         _initialPosition = transform.position;
@@ -118,6 +122,7 @@ public class RoamerBehaviour : MonoBehaviour
 
     void AttackTarget()
     {
+        
         if (Time.time > _lastAttackTime + _attackCooldown)
         {
             // Play attack animation, reduce player health or use block mechanic
@@ -176,9 +181,11 @@ public class RoamerBehaviour : MonoBehaviour
     {
         if (collision.collider.CompareTag("Player"))
         {
+            collision.gameObject.GetComponent<Health>().CurrentHealth -= RoamerDamage;
             AttackTarget();
+                   
         }
     }
-
+    
 
 }
