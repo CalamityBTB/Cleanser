@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour     
 {
+    public GameObject trailRenderer;
     private SpriteRenderer spriteRenderer;
     public float speed;
     public Rigidbody2D rb;
@@ -19,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
     private float activeMoveSpeed;
 
     public float dashSpeed;
+    private bool isDashing = false;
    
 
 
@@ -37,6 +39,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
 
@@ -49,12 +52,24 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.LeftShift) && dashCooldownTime >= dashCooldown)
         {
-
+            isDashing = true;
             activeMoveSpeed = dashSpeed;
             dashTime = dashDuration;
             dashCooldownTime = 0;
+
+            if (isDashing)
+            {
+                trailRenderer.SetActive(true);
+                
+            }
+            
+           
+            
             
         }
+        
+
+
 
         if (dashTime <= 0)
         {
