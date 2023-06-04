@@ -9,6 +9,9 @@ public class PlayerMovement : MonoBehaviour
     public float speed;
     public Rigidbody2D rb;
 
+    public AudioSource DashSound;
+    public AudioSource WalkingSound;
+
     public Animator animator;
 
     //Dash 
@@ -21,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
 
     public float dashSpeed;
     private bool isDashing = false;
-   
+    private bool isWalking = false;
 
 
     private void Awake()
@@ -50,8 +53,22 @@ public class PlayerMovement : MonoBehaviour
         animator.SetFloat("Vertical", vertical);
         animator.SetFloat("Speed", movement.sqrMagnitude);
 
+        isWalking = movement.magnitude > 0;
+
+        if (activeMoveSpeed > 0f && !isWalking)
+        {
+            WalkingSound.Play();
+            isWalking = true;
+        }
+        else if (activeMoveSpeed <= 0f && isWalking)
+        {
+            WalkingSound.Stop();
+            isWalking = false;
+        }
+
         if (Input.GetKeyDown(KeyCode.LeftShift) && dashCooldownTime >= dashCooldown)
         {
+            DashSound.Play();
             isDashing = true;
             activeMoveSpeed = dashSpeed;
             dashTime = dashDuration;

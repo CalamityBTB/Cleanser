@@ -17,6 +17,13 @@ public class MeleeAttack : Health
     private bool _isBlocking = false;
     private bool _isAttacking = false;
 
+    public AudioSource Swing1;
+    public AudioSource Swing2;
+    public AudioSource SwordHit1;
+    public AudioSource SwordHit2;
+    public AudioSource Block1;
+    public AudioSource Block2;
+
 
     private void Update()
     {
@@ -33,6 +40,7 @@ public class MeleeAttack : Health
                         Enemy enemy = hitObject.GetComponent<Enemy>();
                         if (enemy != null)
                         {
+                            PlayRandomHitSound();
                             enemy.TakeDamage(AttackDamage);
                         }
                     }
@@ -53,8 +61,13 @@ public class MeleeAttack : Health
                         Enemy enemy = hitObject.GetComponent<Enemy>();
                         if (enemy != null)
                         {
+                            PlayRandomHitSound();
                             enemy.TakeDamage(AttackDamage);
                         }
+                    }
+                    else
+                    {
+                        PlayRandomSwingSound();
                     }
                 }
 
@@ -88,6 +101,43 @@ public class MeleeAttack : Health
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, AttackRange);
+    }
+
+    private void PlayRandomHitSound()
+    {
+        int randomValue = Random.Range(0, 2);
+        if (randomValue == 0)
+        {
+            SwordHit1.Play();
+        }
+        else
+        {
+            SwordHit2.Play();
+        }
+    }
+    private void PlayRandomSwingSound()
+    {
+        int randomValue = Random.Range(0, 2);
+        if (randomValue == 0)
+        {
+            Swing1.Play();
+        }
+        else
+        {
+            Swing2.Play();
+        }
+    }
+    private void PlayRandomBlockSound()
+    {
+        int randomValue = Random.Range(0, 2);
+        if (randomValue == 0)
+        {
+            Block1.Play();
+        }
+        else
+        {
+            Block2.Play();
+        }
     }
 }
 

@@ -26,6 +26,9 @@ public class RoamerBehaviour : MonoBehaviour
 
     Health playerHealth;
 
+    public AudioSource Hit1;
+    public AudioSource Hit2;
+
     public float RoamerDamage;
 
     void Start()
@@ -182,10 +185,22 @@ public class RoamerBehaviour : MonoBehaviour
         if (collision.collider.CompareTag("Player"))
         {
             collision.gameObject.GetComponent<Health>().CurrentHealth -= RoamerDamage;
+            
             AttackTarget();
                    
         }
     }
-    
+    private void PlayRandomHitSound()
+    {
+        int randomValue = Random.Range(0, 3);
+        if (randomValue <= 1)
+        {
+            Hit1.Play();
+        }
+        else
+        {
+            Hit2.Play();
+        }
+    }
 
 }
