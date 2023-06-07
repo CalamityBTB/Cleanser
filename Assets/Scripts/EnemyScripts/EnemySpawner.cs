@@ -4,78 +4,114 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    [SerializeField] private GameObject smallRoamer;
+    public enum SpawnState {SPAWNING, WAITING, COUNTING, FINISHED};
 
-    [SerializeField] private float roamerInterval = 3.5f;
-
-    public int EnemiesPerWave = 5;
-    public int NumberOfWaves = 3;
-    public Transform[] SpawnPoint;
-
-    public int CurrentWave = 0;
-    private int enemiesSpawned = 0;
-    private float spawnTimer = 0f;
-
-   
-    void Start()
+    [System.Serializable]
+    public class Wave
     {
-        StartNextWave();
+        public string Name;
+        public Transform Enemy;
+        public int Count;
+        public float Rate;
+    }
+
+    public Wave[] Waves;
+    private int nextWave = 0;
+
+    public Transform[] SpawnPoints;
+
+    public float TimeBetweenWaves = 5f;
+    public float WaveCountdown;
+
+    private float searchCountdown = 1f;
+
+    private SpawnState state = SpawnState.COUNTING;
+
+    private void Start()
+    {
+        WaveCountdown = TimeBetweenWaves;
     }
 
     private void Update()
     {
-        if (enemiesSpawned < EnemiesPerWave)
+        if (state == SpawnState.WAITING)
         {
-            spawnTimer += Time.deltaTime;
-
-            if (spawnTimer >= roamerInterval)
+            if (!EnemyIsAlive())
             {
-                StartCoroutine(spawnEnemy(roamerInterval, smallRoamer));
-                spawnTimer = 0f;
+                return;
             }
+        }
+
+        if (state == SpawnState.FINISHED)
+        {
+            return;
+        }
+
+        if (WaveCountdown <= 0)
+        {
+            if (state != SpawnState.SPAWNING)
+            {
+                StartCoroutine(SpawnWave(Waves[nextWave]));
+            }
+        }
+        else
+        {
+            WaveCountdown -= Time.deltaTime;
         }
     }
 
-    private IEnumerator spawnEnemy(float interval, GameObject enemy)
+    void WaveCompleted()
     {
-        yield return new WaitForSeconds(interval);
-        GameObject newEnemy = Instantiate(enemy, new Vector3(Random.Range(-5f, 5), Random.Range(-6f, 6f), 0), Quaternion.identity);
-        enemiesSpawned++;
+        state = SpawnState.COUNTING;
+        WaveCountdown = TimeBetweenWaves;
 
-        if (enemiesSpawned >= EnemiesPerWave)
+        if (nextWave + 1 > Waves.Length - 1)
         {
-            if (CurrentWave >= NumberOfWaves)
-            {
-                Debug.LogError("All waves completed");
-            }
-            else
-            {
-                StartCoroutine(spawnEnemy(roamerInterval, smallRoamer));
-            }
+            state = SpawnState.FINISHED;
         }
+        else
+        {
+            nextWave++;
+        }
+
         
     }
 
-    private void StartNextWave()
+    bool EnemyIsAlive()
     {
-        CurrentWave++;
-        enemiesSpawned = 0;
-
-        switch (CurrentWave)
+        searchCountdown -= Time.deltaTime;
+        if (searchCountdown <= 0f)
         {
-            case 1:
-                EnemiesPerWave = 5;
-                roamerInterval = 2f;
-                break;
-            case 2:
-                EnemiesPerWave = 10;
-                roamerInterval = 1.5f;
-                break;
-            case 3:
-                EnemiesPerWave = 15;
-                roamerInterval = 1f;
-                break;
+            searchCountdown = 1f;
+            if (GameObject.FindGameObjectWithTag("Enemy") == null)
+            {
+                return false;
+            }
         }
+
+        return true;
     }
-    
+
+    IEnumerator SpawnWave(Wave _wave)
+    {
+        state = SpawnState.SPAWNING;
+
+        for (int i = 0; i < _wave.Count; i++)
+        {
+            SpawnEnemy(_wave.Enemy);
+            yield return new WaitForSeconds(4 / _wave.Rate);
+        }
+
+        state = SpawnState.WAITING;
+
+        yield break;
+    }
+
+    void SpawnEnemy (Transform _enemy)
+    {
+        Transform _sp = SpawnPoints[Random.Range(0, SpawnPoints.Length)];
+        Instantiate(_enemy, _sp.position, _sp.rotation);
+    }
+
+
 }

@@ -86,13 +86,11 @@ public class MeleeAttack : Health
         {
             _lastBlockTime = Time.time;
             _isBlocking = true;
-            Debug.Log("block on");
         }
 
         if (Time.time - _lastBlockTime > BlockDuration)
         {
             _isBlocking = false;
-            Debug.Log("block off");
         }
     }
 

@@ -18,13 +18,28 @@ public class BossScript : MonoBehaviour
     private Vector3 dashDir;
     private float dashSpeed = 6f;
     public float bossDamage = 20f;
-    public float BossHealth = 200f;
+    public float BossHealth = 400f;
 
+    public GameObject BulletPrefab;
+    public Transform BulletSpawnPoint;
+    public float BulletSpeed = 10f;
+    public float BulletFireRate = 0.2f;
 
+    private bool isBulletHell = false;
+
+    [SerializeField]
+    private int bulletsAmount = 10;
+
+    [SerializeField]
+    private float startAngle = 90f, endAngle = 270f;
+
+    private Vector2 bulletMoveDirection;
+
+  
     void Start()
     {
         bossBody = GetComponent<Rigidbody2D>();
-        
+        InvokeRepeating("Fire", 0f, 2f);
     }
 
     void Update()
@@ -38,13 +53,13 @@ public class BossScript : MonoBehaviour
         transform.Translate(direction * moveSpeed * Time.deltaTime);
 
 
-        if (BossHealth <= 70f)
+        if (BossHealth <= 350f)
         {
             fastUpgrade = true;
             StartCoroutine(Dash(direction));
         }
 
-
+       
     }
     private void FixedUpdate()
     {
@@ -77,6 +92,29 @@ public class BossScript : MonoBehaviour
         }
     }
 
+    private void Fire()
+    {
+        float angleStep = (endAngle - startAngle) / bulletsAmount;
+        float angle = startAngle;
+
+        for (int i = 0; i < bulletsAmount + 1; i++)
+        {
+            float bulDirX = transform.position.x + Mathf.Sin((angle * Mathf.PI) / 180f);
+            float bulDirY = transform.position.y + Mathf.Cos((angle * Mathf.PI) / 180f);
+
+            Vector3 bulMoveVector = new Vector3(bulDirX, bulDirY, 0f);
+            Vector2 bulDir = (bulMoveVector - transform.position).normalized;
+
+            GameObject bul = BulletPool.bulletPoolInstanse.GetBullet();
+            bul.transform.position = transform.position;
+            bul.transform.rotation = transform.rotation;
+            bul.SetActive(true);
+            bul.GetComponent<Bullet>().SetMoveDirection(bulDir);
+
+            angle += angleStep;
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
@@ -89,5 +127,6 @@ public class BossScript : MonoBehaviour
             }
         }
     }
+
 
 }
