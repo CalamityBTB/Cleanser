@@ -55,7 +55,6 @@ public class RangerBehaviour : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(transform.position, chaseArea);
         Gizmos.DrawWireSphere(transform.position, shootingRange);
     }
         
