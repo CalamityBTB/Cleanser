@@ -31,6 +31,11 @@ public class EnemySpawner : MonoBehaviour
 
     private SpawnState state = SpawnState.COUNTING;
 
+    public GameObject TriggerNext1;
+    public GameObject TriggerNext2;
+    public GameObject TriggerNext3;
+    private int roomCount = 0;
+
     private void Start()
     {
         WaveCountdown = TimeBetweenWaves;
@@ -79,6 +84,19 @@ public class EnemySpawner : MonoBehaviour
         }
 
         currentEnemyCount = 0;
+
+        if (roomCount == 0)
+        {
+            TriggerNext1.SetActive(true);
+        }
+        else if (roomCount == 1)
+        {
+            TriggerNext2.SetActive(true);
+        }
+        else if (roomCount == 1)
+        {
+            TriggerNext3.SetActive(true);
+        }
     }
 
 
