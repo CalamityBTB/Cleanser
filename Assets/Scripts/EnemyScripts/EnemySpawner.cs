@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public enum SpawnState {SPAWNING, WAITING, COUNTING, FINISHED};
+    public enum SpawnState { SPAWNING, WAITING, COUNTING, FINISHED };
 
     [System.Serializable]
     public class Wave
     {
         public string Name;
         public Transform Enemy;
-        public int Count;
+        public int BaseCount;
+        public int CurrentCount;
         public float Rate;
     }
 
@@ -22,6 +23,9 @@ public class EnemySpawner : MonoBehaviour
 
     public float TimeBetweenWaves = 5f;
     public float WaveCountdown;
+
+    private int currentEnemyCount = 0;
+    private float nextWaveEnemyMultiplier = 1.5f;
 
     private float searchCountdown = 1f;
 
@@ -38,6 +42,7 @@ public class EnemySpawner : MonoBehaviour
         {
             if (!EnemyIsAlive())
             {
+                WaveCompleted();
                 return;
             }
         }
@@ -59,7 +64,6 @@ public class EnemySpawner : MonoBehaviour
             WaveCountdown -= Time.deltaTime;
         }
     }
-
     void WaveCompleted()
     {
         state = SpawnState.COUNTING;
@@ -74,8 +78,9 @@ public class EnemySpawner : MonoBehaviour
             nextWave++;
         }
 
-        
+        currentEnemyCount = 0;
     }
+
 
     bool EnemyIsAlive()
     {
@@ -83,7 +88,7 @@ public class EnemySpawner : MonoBehaviour
         if (searchCountdown <= 0f)
         {
             searchCountdown = 1f;
-            if (GameObject.FindGameObjectWithTag("Enemy") == null)
+            if (GameObject.FindGameObjectWithTag("Enemy") == null && currentEnemyCount == 0)
             {
                 return false;
             }
@@ -96,18 +101,21 @@ public class EnemySpawner : MonoBehaviour
     {
         state = SpawnState.SPAWNING;
 
-        for (int i = 0; i < _wave.Count; i++)
+        _wave.CurrentCount = _wave.BaseCount + (int)(currentEnemyCount * nextWaveEnemyMultiplier);
+
+        for (int i = 0; i < _wave.CurrentCount; i++)
         {
             SpawnEnemy(_wave.Enemy);
             yield return new WaitForSeconds(4 / _wave.Rate);
         }
 
         state = SpawnState.WAITING;
-
+        currentEnemyCount = _wave.CurrentCount;
         yield break;
     }
 
-    void SpawnEnemy (Transform _enemy)
+
+    void SpawnEnemy(Transform _enemy)
     {
         Transform _sp = SpawnPoints[Random.Range(0, SpawnPoints.Length)];
         Instantiate(_enemy, _sp.position, _sp.rotation);
