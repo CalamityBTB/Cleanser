@@ -61,9 +61,12 @@ public class BossScript : MonoBehaviour
         }
         if(BossHealth <= 270f)
         {
-
+            
         }
-        
+        if (BossHealth <= 120f)
+        {
+            StartCoroutine(Explode());
+        }
 
        
     }
