@@ -39,7 +39,7 @@ public class PlayerMovement : MonoBehaviour
         dashCooldownTime = dashCooldown;
         activeMoveSpeed = speed;
     }
-
+        
     private void Update()
     {
         

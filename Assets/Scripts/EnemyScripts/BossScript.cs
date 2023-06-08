@@ -53,11 +53,15 @@ public class BossScript : MonoBehaviour
         transform.Translate(direction * moveSpeed * Time.deltaTime);
 
 
-        if (BossHealth <= 350f)
+        if (BossHealth <= 350f && !isBulletHell)
         {
             fastUpgrade = true;
             StartCoroutine(Dash(direction));
             
+        }
+        if(BossHealth <= 270f)
+        {
+
         }
         
 
@@ -128,6 +132,25 @@ public class BossScript : MonoBehaviour
                 playerHealth.TakeDamage(bossDamage);
             }
         }
+    }
+    IEnumerator Explode()
+    {
+        moveSpeed = moveSpeed * dashSpeed;
+        //animasyon
+        yield return new WaitForSeconds(3f);
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, GetComponent<CircleCollider2D>().radius);
+        foreach (Collider2D collider in colliders)
+        {
+            if (collider.CompareTag("Player"))
+            {
+                Health playerHealth = collider.GetComponent<Health>();
+                if (playerHealth != null)
+                {
+                    playerHealth.TakeDamage(bossDamage);
+                }
+            }
+        }
+        yield return new WaitForSeconds(4f);
     }
 
 

@@ -4,16 +4,15 @@ using UnityEngine;
 
 public class RangerBehaviour : MonoBehaviour
 {
+
     public float Speed;
 
     private Transform target;
 
-    [SerializeField]private float RotationSpeed = 5f;
-
-    private float chaseArea;
     private float shootingRange;
     private float distance;
 
+    public Animator RoamerAnimator;
     
 
     private void Start()
@@ -23,23 +22,32 @@ public class RangerBehaviour : MonoBehaviour
 
     private void Update()
     {
+        float horizontal = Input.GetAxis("Horizontal");
+        float vertical = Input.GetAxis("Vertical");
         distance = Vector2.Distance(transform.position, target.transform.position);
         Vector2 direction = target.transform.position - transform.position;
         direction.Normalize();
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         Quaternion targetRotation = Quaternion.AngleAxis(angle, Vector3.forward);
-        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, RotationSpeed * Time.deltaTime);
 
+        RoamerAnimator.SetFloat("X", horizontal);
+        RoamerAnimator.SetFloat("Y", vertical);
 
-        if (distance < chaseArea && distance > shootingRange)
+        if (distance > shootingRange)
         {
             transform.position = Vector2.MoveTowards(this.transform.position, target.transform.position, Speed * Time.deltaTime);
             transform.rotation = Quaternion.Euler(Vector3.forward * angle);
+
+            
+
+
         }
         else if (distance <= shootingRange)
         {
             
         }
+
+
 
     }
 
