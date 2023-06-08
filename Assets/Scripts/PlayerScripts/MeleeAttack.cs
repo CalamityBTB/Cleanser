@@ -45,6 +45,10 @@ public class MeleeAttack : Health
            
             
         }
+        else
+        {
+            PlayerAnimator.SetBool("IsClicked", false);
+        }
        
     }
 
