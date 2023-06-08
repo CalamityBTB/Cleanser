@@ -9,6 +9,8 @@ public class RoamerBehaviour : MonoBehaviour
     [SerializeField] private float _moveSpeed = 2f;
     private bool _isIdle = true;
 
+
+
     [Header("Combat State")]
     [SerializeField] private float _attackRange = 1f;
     [SerializeField] private float _attackCooldown = 2f;
@@ -31,6 +33,12 @@ public class RoamerBehaviour : MonoBehaviour
 
     public float RoamerDamage;
 
+    public Animator animator;
+
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
+    }
     void Start()
     {
         _initialPosition = transform.position;
@@ -76,6 +84,14 @@ public class RoamerBehaviour : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        float horizontal = Input.GetAxis("Horizontal");
+        float vertical = Input.GetAxis("Vertical");
+
+        animator.SetFloat("X", horizontal);
+        animator.SetFloat("Y", vertical);
+    }
 
 
     void RoamAround()
@@ -128,7 +144,20 @@ public class RoamerBehaviour : MonoBehaviour
         
         if (Time.time > _lastAttackTime + _attackCooldown)
         {
-            // Play attack animation, reduce player health or use block mechanic
+            Collider2D[] hitObjects = Physics2D.OverlapCircleAll(transform.position, _attackRange);
+
+            foreach (Collider2D hitObject in hitObjects)
+            {
+                if (hitObject.tag == "Player")
+                {
+                    playerHealth = hitObject.GetComponent<Health>();
+                    if (playerHealth != null)
+                    {
+                        PlayRandomHitSound();
+                        playerHealth.TakeDamage(20f);
+                    }
+                }
+            }
             _lastAttackTime = Time.time;
             StartCoroutine(AttackCooldown());
         }

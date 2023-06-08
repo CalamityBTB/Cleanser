@@ -725,6 +725,7 @@ GameObject:
   - component: {fileID: -1632025755372295635}
   - component: {fileID: 1078862310}
   - component: {fileID: 1078862319}
+  - component: {fileID: -3745633487786842763}
   m_Layer: 0
   m_Name: TestRoamer
   m_TagString: Enemy
@@ -823,6 +824,7 @@ MonoBehaviour:
   Hit1: {fileID: 1594920981}
   Hit2: {fileID: 674282260}
   RoamerDamage: 0
+  animator: {fileID: -3745633487786842763}
 --- !u!61 &8416471174535302917
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1200,3 +1202,23 @@ MonoBehaviour:
   Die1: {fileID: 1165502196}
   Die2: {fileID: 1560175146}
   Die3: {fileID: 751580597}
+--- !u!95 &-3745633487786842763
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8416471174535302916}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: adfd1883a5e0d48bb9d86bc01d0a2e44, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

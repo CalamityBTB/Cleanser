@@ -57,7 +57,9 @@ public class BossScript : MonoBehaviour
         {
             fastUpgrade = true;
             StartCoroutine(Dash(direction));
+            
         }
+        
 
        
     }
