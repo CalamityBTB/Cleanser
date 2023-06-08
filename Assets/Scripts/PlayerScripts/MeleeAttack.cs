@@ -8,7 +8,7 @@ public class MeleeAttack : Health
     private float attackDamage = 5f; 
     public LayerMask EnemyLayers;
 
-    public Animator PlayerAnimator;
+    
     
     private bool _isAttacking = false;
 
@@ -24,7 +24,7 @@ public class MeleeAttack : Health
     {
         if (Input.GetKeyDown(KeyCode.Mouse0) && !_isAttacking )
         {
-            PlayerAnimator.SetBool("IsClicked", true);
+            
            Collider2D[] hitObjects = Physics2D.OverlapCircleAll(transform.position, AttackRange);
 
           foreach (Collider2D hitObject in hitObjects)
@@ -45,10 +45,7 @@ public class MeleeAttack : Health
            
             
         }
-        else
-        {
-            PlayerAnimator.SetBool("IsClicked", false);
-        }
+       
        
     }
 
