@@ -9,8 +9,14 @@ public class RangerBehaviour : MonoBehaviour
 
     private Transform target;
 
-    private float shootingRange;
-    private float distance;
+    private float shootingRange = 5f;
+    
+    private float fireRate = 1f;
+
+    public Transform[] FirePoint;
+    public GameObject[] PoisonBallPrefab;
+    public int maxPoisonBall = 10;
+
 
     public Animator RoamerAnimator;
     
@@ -24,7 +30,6 @@ public class RangerBehaviour : MonoBehaviour
     {
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
-        distance = Vector2.Distance(transform.position, target.transform.position);
         Vector2 direction = target.transform.position - transform.position;
         direction.Normalize();
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
@@ -33,30 +38,45 @@ public class RangerBehaviour : MonoBehaviour
         RoamerAnimator.SetFloat("X", horizontal);
         RoamerAnimator.SetFloat("Y", vertical);
 
-        if (distance > shootingRange)
+        if (target != null)
         {
-            transform.position = Vector2.MoveTowards(this.transform.position, target.transform.position, Speed * Time.deltaTime);
-            transform.rotation = Quaternion.Euler(Vector3.forward * angle);
-
-            
-
-
+            Invoke("Fire", fireRate);
         }
-        else if (distance <= shootingRange)
-        {
-            
-        }
+
+        
+        
 
 
 
     }
-
-
-    private void OnDrawGizmosSelected()
+    private void Fire()
     {
+        
+
+        for (int i = 0; i < maxPoisonBall + 1; i++)
+        {
+            float bulDirX = transform.position.x;
+            float bulDirY = transform.position.y;
+
+            Vector3 bulMoveVector = new Vector3(bulDirX, bulDirY, 0f);
+            Vector2 bulDir = (bulMoveVector - transform.position).normalized;
+
+            GameObject bul = BulletPool.bulletPoolInstanse.GetBullet();
+            bul.transform.position = transform.position;
+            bul.transform.rotation = transform.rotation;
+            bul.SetActive(true);
+            bul.GetComponent<Bullet>().SetMoveDirection(bulDir);
+
+            
+        }
+    }
+
+
+        private void OnDrawGizmosSelected()
+        {
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, shootingRange);
-    }
+        }
         
 }
 
