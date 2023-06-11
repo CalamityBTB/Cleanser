@@ -30,7 +30,7 @@ public class PoisonBall : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            //health þeyleri falan
+            //player health down
             Destroy(gameObject);
         }
     }
